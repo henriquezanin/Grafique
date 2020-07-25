@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #0C6291;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainController">
+   <children>
+      <Rectangle arcHeight="25.0" arcWidth="25.0" fill="#fbfef9" height="489.0" layoutX="253.0" layoutY="158.0" stroke="BLACK" strokeType="INSIDE" width="774.0" />
+      <ImageView fx:id="imageViewerBacen" fitHeight="132.0" fitWidth="119.0" layoutX="581.0" layoutY="343.0" onMouseClicked="#imageViewerBacenClick" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@misc/bacenIcon.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="589.0" layoutY="471.0" onMouseClicked="#imageViewerBacenClick" text="Banco Central">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="442.0" layoutY="179.0" text="Selecione a instituição">
+         <font>
+            <Font name="System Bold" size="31.0" />
+         </font>
+      </Label>
+      <Label layoutX="559.0" layoutY="50.0" prefHeight="61.0" prefWidth="163.0" text="Grafique" textFill="#f05d27">
+         <font>
+            <Font name="MAXWELL REGULAR" size="51.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="39.0" fitWidth="147.0" layoutX="626.0" layoutY="665.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@misc/Retina-logo.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="523.0" layoutY="657.0" prefHeight="52.0" prefWidth="90.0" text="Powered by" textFill="WHITE">
+         <font>
+            <Font name="MAXWELL REGULAR" size="20.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>

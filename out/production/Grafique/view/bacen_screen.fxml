@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<SplitPane dividerPositions="0.22065727699530516" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.BacenController">
+  <items>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="718.0" prefWidth="337.0" style="-fx-background-color: #0C6291;">
+         <children>
+            <TextField fx:id="textFieldDatasetCode" layoutX="30.0" layoutY="40.0" promptText="Insira o código" />
+            <Label layoutX="30.0" layoutY="14.0" prefHeight="26.0" prefWidth="71.0" text="Codigo:" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <CheckBox fx:id="checkBoxEnableDateFilter" layoutX="30.0" layoutY="149.0" mnemonicParsing="false" onAction="#checkBoxEnableDateFilterAction" text="Habilitar periodo" textFill="WHITE" />
+            <Label layoutX="30.0" layoutY="176.0" prefHeight="26.0" prefWidth="90.0" text="Data Inicial:" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <DatePicker fx:id="datePickerInitial" layoutX="30.0" layoutY="202.0" />
+            <Label layoutX="30.0" layoutY="231.0" prefHeight="26.0" prefWidth="90.0" text="Data Final:" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <DatePicker fx:id="datePickerFinal" layoutX="30.0" layoutY="257.0" />
+            <TextField fx:id="labelChart" layoutX="16.0" layoutY="407.0" prefHeight="26.0" prefWidth="246.0" promptText="Insira o titulo do grafico" />
+            <Label layoutX="25.0" layoutY="381.0" prefHeight="26.0" prefWidth="71.0" text="Titulo" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Line endX="146.0" layoutX="122.0" layoutY="374.0" startX="-112.0" />
+            <TextField fx:id="labelX" layoutX="16.0" layoutY="472.0" prefHeight="26.0" prefWidth="246.0" promptText="Insira o rotulo para o eixo X" />
+            <Label layoutX="25.0" layoutY="446.0" prefHeight="26.0" prefWidth="133.0" text="Rotulo do eixo X" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="labelY" layoutX="16.0" layoutY="538.0" prefHeight="26.0" prefWidth="246.0" promptText="Insira o rotulo para o eixo Y" />
+            <Label layoutX="25.0" layoutY="512.0" prefHeight="26.0" prefWidth="133.0" text="Rotulo do eixo Y" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Button fx:id="buttonAddChart" layoutX="160.0" layoutY="312.0" mnemonicParsing="false" onAction="#buttonAddChartAction" prefHeight="43.0" prefWidth="102.0" style="-fx-background-radius: 5;" text="Adicionar" />
+            <Button fx:id="buttonClean" layoutX="15.0" layoutY="312.0" mnemonicParsing="false" onAction="#buttonCleanAction" prefHeight="43.0" prefWidth="102.0" style="-fx-background-radius: 5;" text="Limpar" />
+            <Button fx:id="buttonExport" layoutX="174.0" layoutY="667.0" mnemonicParsing="false" style="-fx-background-radius: 25;" text="Exportar" />
+            <Button fx:id="buttonBackToMain" layoutX="24.0" layoutY="667.0" mnemonicParsing="false" onAction="#buttonBackToMainAction" style="-fx-background-radius: 25;" text="Voltar" wrapText="true" />
+            <Label fx:id="labelDatasetCodeError" layoutX="32.0" layoutY="69.0" prefHeight="16.0" prefWidth="171.0" textFill="RED" />
+            <Label fx:id="labelInitialDatePickerError" layoutX="30.0" layoutY="215.0" prefHeight="16.0" prefWidth="171.0" textFill="RED" />
+            <Label fx:id="labelFinalDatePickerError" layoutX="30.0" layoutY="283.0" prefHeight="16.0" prefWidth="171.0" textFill="RED" />
+            <Label layoutX="29.0" layoutY="77.0" prefHeight="26.0" prefWidth="133.0" text="Nome da serie" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="textFieldDatasetName" layoutX="29.0" layoutY="103.0" promptText="Insira o nome" />
+            <Button fx:id="buttonDefineChartData" layoutX="78.0" layoutY="582.0" mnemonicParsing="false" onAction="#setChartLabels" prefHeight="43.0" prefWidth="102.0" style="-fx-background-radius: 5;" text="Definir" />
+         </children></AnchorPane>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" style="-fx-background-color: #000000;">
+         <children>
+            <LineChart fx:id="lineChart" layoutX="34.0" layoutY="32.0" prefHeight="654.0" prefWidth="925.0" style="-fx-background-radius: 10; -fx-background-color: #F7F5FB;">
+              <xAxis>
+                <CategoryAxis side="BOTTOM" />
+              </xAxis>
+              <yAxis>
+                <NumberAxis side="LEFT" />
+              </yAxis>
+            </LineChart>
+         </children></AnchorPane>
+  </items>
+</SplitPane>
