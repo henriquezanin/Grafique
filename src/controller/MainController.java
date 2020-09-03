@@ -6,7 +6,7 @@ public class MainController {
 
     @FXML
     protected void imageViewerBacenClick(){
-        Main.changeScreen(Utils.Screens.BACEN);
+        Main.changeScreen(Utils.Screens.BACENMAIN);
     }
 
 }

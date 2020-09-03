@@ -1,1 +1,3 @@
 javafx-sdk-14.0.1
+out/
+*.class

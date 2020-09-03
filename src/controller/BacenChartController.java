@@ -9,7 +9,7 @@ import model.Bacen;
 import model.GraphData;
 import java.time.LocalDate;
 
-public class BacenController {
+public class BacenChartController {
     private LocalDate initialDate;
     private LocalDate endDate;
     @FXML
